@@ -51,11 +51,17 @@ namespace Metsys.Bson
         
         private static byte[] GenerateHostHash()
         {
-            using(var md5 = MD5.Create())
+            using (var sha256 = SHA256.Create())
             {
                 var host = Dns.GetHostName();
-                return md5.ComputeHash(Encoding.Default.GetBytes(host));
+                return sha256.ComputeHash(Encoding.Default.GetBytes(host));
             }
+
+            //using(var md5 = MD5.Create())
+            //{
+            //    var host = Dns.GetHostName();
+            //    return md5.ComputeHash(Encoding.Default.GetBytes(host));
+            //}
         }
         private static int GenerateProcId()
         {

@@ -1,5 +1,6 @@
 TestResult.xml
 Tests.VisualState.xml
+.vs/**/*
 [Bb]in
 [Oo]bj
 [Rr]elease

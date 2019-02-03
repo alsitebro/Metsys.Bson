@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace Metsys.Bson.Tests
 {
+    [TestFixture]
     public class ObjectIdTests
     {
         [Test]
